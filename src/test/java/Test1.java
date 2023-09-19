@@ -1,5 +1,3 @@
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -14,9 +12,9 @@ public class Test1 {
         Configuration.baseUrl = "https://github.com/";
 
         //Опционально, для отладки
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
+        //Configuration.pageLoadStrategy = "eager";
+        //Configuration.browserSize = "1920x1080";
+        //Configuration.holdBrowserOpen = true;
     }
 
     @Test
