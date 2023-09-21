@@ -13,9 +13,10 @@ public class HoverSolution {
     @Test
     void hoverSolutionToEnterprize() {
 
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
+        //Опционально для отладки
+        //Configuration.pageLoadStrategy = "eager";
+        //Configuration.browserSize = "1920x1080";
+        //Configuration.holdBrowserOpen = true;
 
         open("https://github.com/");
         $(withText("Solutions")).hover();
