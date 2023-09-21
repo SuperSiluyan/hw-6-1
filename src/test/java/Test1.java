@@ -3,6 +3,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class Test1 {
@@ -23,8 +24,7 @@ public class Test1 {
         $("#wiki-tab").click();
         $("#wiki-pages-filter").setValue("soft");
         $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
-        $x("//*[@id=\"wiki-pages-box\"]/div/div[2]/ul/li[17]/details/summary/div/div").click();
-        $$("li.my-2").findBy(text("Using JUnit5")).click();
+        $(byText("SoftAssertions")).click();
         $$("div .highlight").get(4).shouldHave(text("@ExtendWith({SoftAssertsExtension.class})\n" +
                 "class Tests {\n" +
                 "  @Test\n" +
